@@ -436,8 +436,6 @@ header {
   height: 620px;
   margin: 0 auto;
   position: relative;
-
-  border: 1px dashed red;
 }
 /* Magazine */
 .magazineTitle {
@@ -485,7 +483,8 @@ header {
   transform: scale(1.05);
 }
 .magaDetail {
-  width: 411px;
+  margin-left: 24px;
+  width: 398px;
   height: 85px;
   position: absolute;
   top: 16px;
@@ -523,7 +522,7 @@ header {
 }
 .evenCard {
   display: block;
-  width: 190px;
+  width: 210px;
   height: 576px;
   border-radius: 12px;
   overflow: hidden;
@@ -531,11 +530,11 @@ header {
   box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
 }
 .evenCard img {
-  width: 190px;
+  width: 200px;
   height: 576px;
-  position: relative;
   object-fit: cover;
-  left: -20px;
+  position: relative;
+  right: 10px;
   transition: transform 0.3s ease;
 }
 .evenCard:hover img {
@@ -544,4 +543,112 @@ header {
 
 /* view more */
 .viewMore {
+  display: inline-block;
+  text-align: right;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 120px;
+  right: 0;
+}
+.viewMore p {
+  float: left;
+  margin-top: 2px;
+  position: relative;
+  right: -8px;
+}
+.viewMore:hover {
+  color: #ff6ec7;
+}
+/* footer */
+footer {
+  width: 75%;
+  height: 250px;
+  margin: 68px auto 0;
+  position: relative;
+  border-left: 3px solid #000;
+  border-right: 3px solid #000;
+  background-color: #c0c0c0;
+  padding: 32px 122px 0 122px;
+}
+footer > img {
+  width: 101.5%;
+  position: absolute;
+  top: -10px;
+  left: -9px;
+}
+.footerLeft {
+  float: left;
+}
+.logoBottom {
+  display: inline-block;
+}
+.logoBottom img {
+  height: 50px;
+  margin-bottom: 16px;
+}
+.snsList li {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 14px;
+}
+.email {
+  clear: both;
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 1rem;
+}
+.email > a {
+  text-decoration: underline;
+}
+.email > a:hover {
+  color: #ff6ec7;
+}
+.copy {
+  margin-top: 14px;
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 1rem;
+}
+.footerRight {
+  float: right;
+  width: 369px;
+  height: 201px;
+}
+.supportMenu {
+  float: left;
+  width: 173px;
+  height: 140px;
+}
+.supportMenu li {
+  margin-bottom: 12px;
+}
+.supportMenu a {
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 0.9rem;
+}
+.supportMenu a:hover {
+  color: #ff6ec7;
+}
+.legalMenu {
+  float: right;
+  width: 162px;
+  height: 140px;
+}
+.legalMenu li {
+  margin-bottom: 12px;
+}
+.legalMenu a {
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 0.9rem;
+}
+.legalMenu a:hover {
+  color: #ff6ec7;
+}
+.withLove {
+  clear: both;
+  position: relative;
+  top: 38px;
+  font-family: Joan, serif;
+  font-size: 1.125rem;
+  margin-top: 38px;
 }
