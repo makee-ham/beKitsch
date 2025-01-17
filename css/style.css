@@ -66,16 +66,21 @@ header {
   content: "";
 }
 .subCategories {
+  width: 320px;
+  text-align: right;
   position: relative;
   top: 10px;
-  left: 100px;
+  left: 0px;
   z-index: 100;
   display: none;
+}
+.subCategories.active {
+  display: block;
 }
 .subCategories ul {
   position: absolute;
   top: 56px;
-  left: 56px;
+  left: 160px;
 }
 .subCategories li {
   text-align: center;
@@ -118,6 +123,7 @@ header {
   width: 300vw;
   height: 300px;
   margin-left: -90vw;
+  overflow: hidden;
 }
 .image1 {
   display: block;
@@ -273,7 +279,7 @@ header {
   background-color: #ffee6b;
 }
 .tabCardImg {
-  width: 276px;
+  width: 100%;
   height: 300px;
   overflow: hidden;
 }
@@ -302,13 +308,13 @@ header {
   position: absolute;
   z-index: 10;
   top: 53px;
-  left: 74px;
+  left: 24px;
 }
 .sticker2 {
   position: absolute;
   z-index: 10;
   bottom: -10.13px;
-  right: 163.7px;
+  right: 80px;
 }
 /* On Sale */
 .saleBoard {
@@ -362,7 +368,6 @@ header {
 .saleCardDetail {
   width: 256px;
   height: 81px;
-  position: absolute;
   margin: 24px;
 }
 .saleCardDetail h4 {
@@ -381,25 +386,37 @@ header {
 .recommendTag {
   position: absolute;
   z-index: 10;
+  bottom: -93px;
   left: 96px;
-  bottom: -143px;
 }
-.recommendBoard {
-  width: 300%;
+/* Recommendation Container */
+.recommendBoardContainer {
+  overflow: hidden; /* 컨테이너 밖의 요소 숨김 */
+  position: relative;
+  width: 100%; /* 화면 전체 너비 */
   height: 420px;
-  margin-left: -100%;
   margin-bottom: 84px;
+  cursor: grab;
+}
+/* Recommendation Board */
+.recommendBoard {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 64px;
+  gap: 48px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  transition: transform 0.3s ease; /* 드래그가 끝난 후 부드러운 이동 */
 }
+/* Individual Recommendation Circle */
 .recoCircle {
   display: block;
   width: 420px;
   height: 420px;
   border: 3px solid #000;
-  border-radius: 420px;
+  border-radius: 50%; /* 완전한 원형 */
   overflow: hidden;
 }
 .recoCircle img {
@@ -409,8 +426,9 @@ header {
   transition: transform 0.3s ease;
 }
 .recoCircle:hover img {
-  transform: scale(1.05);
+  transform: scale(1.05); /* 마우스 오버 시 확대 */
 }
+
 /* text slide */
 .textSlide {
   width: 100%;
@@ -418,18 +436,27 @@ header {
   background: linear-gradient(to right, #ffee6b, #78ff66);
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  overflow: hidden; /* 영역 밖 내용 숨기기 */
+  position: relative;
   margin-bottom: 80px;
 }
-.textSlide span {
+.textSlide ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  width: max-content; /* 모든 li를 포함 */
+}
+.textSlide li {
   font-family: "Pixelify Sans", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   white-space: nowrap;
+  margin-right: 20px; /* 항목 간 간격 */
+  margin-top: 10px;
 }
+
 /* Magazine & Events */
 .sectionME {
   width: 75%;
@@ -467,15 +494,15 @@ header {
   background-color: #78ff66;
 }
 .magaImage {
-  width: 100px;
+  width: 20%;
   height: 100px;
   margin: 12px 24px;
   overflow: hidden;
   border-radius: 12px;
 }
 .magaImage img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -483,12 +510,11 @@ header {
   transform: scale(1.05);
 }
 .magaDetail {
-  margin-left: 24px;
-  width: 398px;
+  width: 70%;
   height: 85px;
   position: absolute;
   top: 16px;
-  right: 24px;
+  right: 2%;
 }
 .magaDetail h4 {
   font-family: "Source Code Pro", sans-serif;
@@ -501,6 +527,14 @@ header {
   font-weight: 400;
   color: #666;
   margin-top: 4px;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-word;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 원하는 라인수*/
+  -webkit-box-orient: vertical;
 }
 .magaCon {
   color: #3c3c43;
@@ -526,15 +560,13 @@ header {
   height: 576px;
   border-radius: 12px;
   overflow: hidden;
-
   box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.25);
 }
 .evenCard img {
-  width: 200px;
+  width: 100%;
   height: 576px;
   object-fit: cover;
-  position: relative;
-  right: 10px;
+  object-position: center;
   transition: transform 0.3s ease;
 }
 .evenCard:hover img {

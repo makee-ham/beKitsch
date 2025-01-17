@@ -1,0 +1,196 @@
+/* 1660px부터 반응형 */
+@media all and (min-width: 768px) and (max-width: 1660px) {
+  .toTop {
+    bottom: 40px;
+    right: 40px;
+  }
+  /* 헤더 */
+  header {
+    height: 100px;
+    border-radius: 100px;
+  }
+  .navi,
+  .subCategories {
+    display: none;
+  }
+  .burger {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -25px;
+    left: -10px;
+    transition: transform 0.5s ease;
+  }
+  .burger ul {
+    width: 50px;
+    height: 50px;
+  }
+  .burger li {
+    width: 50px;
+    height: 1px;
+    border: 3px solid #000;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  .burger li:last-child {
+    margin-bottom: 0;
+  }
+  .burger li:first-child {
+    margin-top: 5px;
+  }
+  .burger:hover li {
+    border: 3px solid #ff6ec7;
+  }
+  .mainMenuTab {
+    position: absolute;
+    top: 50px;
+    left: -20px;
+    width: 200px;
+    height: 300px;
+    z-index: 50;
+    background-color: #000;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    display: none;
+  }
+  .mainMenuTab li {
+    text-align: center;
+    padding: 10px 0;
+  }
+  .mainMenuTab a {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  .logo {
+    margin-top: -20px;
+    margin-left: -120px;
+  }
+  .logo img {
+    height: 40px;
+  }
+  .utils {
+    top: 30px;
+    right: 40px;
+  }
+  .utils li {
+    margin-left: 16px;
+  }
+
+  /* 이미지 슬라이드 */
+  .imgSlide {
+    height: 200px;
+  }
+  .slideList {
+    height: 200px;
+  }
+  .image1,
+  .image2,
+  .image3 {
+    height: 200px;
+  }
+  .nextSlide,
+  .prevSlide {
+    height: 200px;
+  }
+  .nextSlide img {
+    top: 75px;
+    left: 0;
+  }
+  .prevSlide img {
+    top: 75px;
+    right: 0;
+  }
+
+  /* New & Best & Steady */
+  /* tab menu */
+  .tabMenu {
+    top: 60px;
+    right: 60px;
+    width: 80%;
+    height: 60px;
+    text-align: right;
+  }
+  .tabMenu li {
+    width: 20%;
+    height: 50px;
+    display: inline-block;
+  }
+  .tabMenu a {
+    font-size: 1.4rem;
+    padding-top: 8px;
+  }
+  /* new section */
+  .sectionNBS {
+    top: 120px;
+    left: 0;
+    margin: 0 10%;
+    padding: 0 24px;
+  }
+  .newCard img {
+    width: 100%;
+    top: 0;
+  }
+  .tabCardHeadline {
+    width: 100%;
+    padding: 5%;
+  }
+  .tabCardHeadline h4 {
+    font-size: 0.9rem;
+  }
+  /* sticker 1, 2 */
+  .sticker1 {
+    top: 32px;
+    left: 32px;
+  }
+  .sticker2 {
+    bottom: -48px;
+    right: -80px;
+  }
+  /* On Sale */
+  .saleBoard {
+    justify-content: space-evenly;
+    gap: 16px;
+  }
+  .sticker3 {
+    bottom: -64px;
+    right: 0;
+  }
+  .saleTag {
+    left: 32px;
+    top: -80px;
+  }
+  .saleCardImg {
+    width: 90%;
+    margin: 16px auto 0;
+  }
+  .saleCardImg img {
+    width: 100%;
+    height: 100%;
+  }
+  .saleCardDetail {
+    width: 90%;
+    height: 96px;
+    margin: 16px auto 0;
+  }
+  .saleCardDetail h4 {
+    font-size: 1.1rem;
+    width: 90%;
+  }
+  .saleCardDetail p {
+    font-size: 0.8rem;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-word;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* 원하는 라인수*/
+    -webkit-box-orient: vertical;
+  }
+  /* Recommendation */
+  .recommendTag {
+    left: 32px;
+  }
+}

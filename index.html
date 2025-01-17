@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>♡Be Kitsch♡</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tab.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marquee.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,7 +28,7 @@
     <div id="wrapper">
       <!-- to top -->
       <div class="toTop">
-        <img src="images/goTop.png" alt="toTop" />
+        <img class="iconHover" src="images/goTop.png" alt="toTop" />
       </div>
       <!-- header -->
       <header>
@@ -40,19 +47,43 @@
               <li><a href="#">Home Deco</a></li>
             </ul>
           </div>
+          <!-- 태블릿 버전 3찍찍으로 바꾸기 -->
+          <a class="burger" href="javascript:void(0);"
+            ><ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </a>
+          <div class="mainMenuTab">
+            <ul>
+              <li><a href="#">Clothing</a></li>
+              <li><a href="#">Accessories</a></li>
+              <li><a href="#">Stationary</a></li>
+              <li><a href="#">Home Deco</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
         </nav>
         <h1 class="logo">
           <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
         </h1>
         <ul class="utils">
           <li>
-            <a href="#"><img src="images/search.png" alt="search" /></a>
+            <a href="#"
+              ><img class="iconHover" src="images/search.png" alt="search"
+            /></a>
           </li>
           <li>
-            <a href="#"><img src="images/cart.png" alt="cart" /></a>
+            <a href="#"
+              ><img class="iconHover" src="images/cart.png" alt="cart"
+            /></a>
           </li>
           <li>
-            <a href="#"><img src="images/user.png" alt="user" /></a>
+            <a href="#"
+              ><img class="iconHover" src="images/user.png" alt="user"
+            /></a>
           </li>
         </ul>
       </header>
@@ -88,9 +119,9 @@
         <!-- 우측 탭 메뉴 -->
         <div class="tabMenu">
           <ul>
-            <li class="active"><a href="#">New</a></li>
-            <li><a href="#">Best</a></li>
-            <li><a href="#">Steady</a></li>
+            <li class="active"><a href="javascript:void(0);">New</a></li>
+            <li><a href="javascript:void(0);">Best</a></li>
+            <li><a href="javascript:void(0);">Steady</a></li>
           </ul>
         </div>
         <!-- New (flex)-->
@@ -113,7 +144,7 @@
           </a>
           <a href="#" class="newCard new3">
             <div class="tabCardHeadline">
-              <h4>Y2K Interior<br />Accessories</h4>
+              <h4>Y2K Interior Accessories</h4>
             </div>
             <div class="tabCardImg">
               <img src="images/new3.jpg" alt="new3" />
@@ -121,9 +152,9 @@
           </a>
         </div>
         <!-- Best -->
-        <div class="sectionNBS sectionBest"></div>
+        <div class="sectionNBS sectionBest">Best seller</div>
         <!-- Steady -->
-        <div class="sectionNBS sectionSteady"></div>
+        <div class="sectionNBS sectionSteady">Steady seller</div>
         <!-- Sticker -->
         <img class="sticker1" src="images/sticker1.svg" alt="sticker1" />
         <img class="sticker2" src="images/sticker2.svg" alt="sticker2" />
@@ -186,76 +217,61 @@
         />
       </div>
       <!-- Recommendation -->
-      <div class="recommendBoard">
-        <a href="#" class="recoCircle reco1"
-          ><img src="images/reco1.jpg" alt="reco1"
-        /></a>
-        <a href="#" class="recoCircle reco2"
-          ><img src="images/reco2.jpg" alt="reco2"
-        /></a>
-        <a href="#" class="recoCircle reco3"
-          ><img src="images/reco3.jpg" alt="reco3"
-        /></a>
-        <a href="#" class="recoCircle reco4"
-          ><img src="images/reco4.jpg" alt="reco4"
-        /></a>
-        <a href="#" class="recoCircle reco5"
-          ><img src="images/reco5.jpg" alt="reco5"
-        /></a>
+      <div class="recommendBoardContainer">
+        <div class="recommendBoard">
+          <a href="#" class="recoCircle reco1">
+            <img src="images/reco1.jpg" alt="reco1" />
+          </a>
+          <a href="#" class="recoCircle reco2">
+            <img src="images/reco2.jpg" alt="reco2" />
+          </a>
+          <a href="#" class="recoCircle reco3">
+            <img src="images/reco3.jpg" alt="reco3" />
+          </a>
+          <a href="#" class="recoCircle reco4">
+            <img src="images/reco4.jpg" alt="reco4" />
+          </a>
+          <a href="#" class="recoCircle reco5">
+            <img src="images/reco5.jpg" alt="reco5" />
+          </a>
+        </div>
       </div>
+
       <!-- text slide -->
       <div class="textSlide">
-        <!-- 50 -->
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
-        <span>BE KITSCH</span>
+        <ul class="tsUl">
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+          <li>BE KITSCH</li>
+        </ul>
       </div>
       <!-- Magazine -->
       <div class="sectionME">
@@ -315,7 +331,7 @@
           </a>
           <a class="viewMore" href="#"
             ><p>View More</p>
-            <img src="images/viewMore.png" alt="viewMore"
+            <img class="iconHover" src="images/viewMore.png" alt="viewMore"
           /></a>
         </div>
 
@@ -333,7 +349,7 @@
           /></a>
           <a href="#" class="viewMore"
             ><p>View More</p>
-            <img src="images/viewMore.png" alt="viewMore"
+            <img class="iconHover" src="images/viewMore.png" alt="viewMore"
           /></a>
         </div>
       </div>
@@ -346,16 +362,30 @@
           </h1>
           <ul class="snsList">
             <li>
-              <a href="#"><img src="images/instagram.png" alt="instagram" /></a>
+              <a href="#"
+                ><img
+                  class="iconHover"
+                  src="images/instagram.png"
+                  alt="instagram"
+              /></a>
             </li>
             <li>
-              <a href="#"><img src="images/youTube.png" alt="youTube" /></a>
+              <a href="#"
+                ><img class="iconHover" src="images/youTube.png" alt="youTube"
+              /></a>
             </li>
             <li>
-              <a href="#"><img src="images/facebook.png" alt="facebook" /></a>
+              <a href="#"
+                ><img
+                  class="iconHover"
+                  src="images/facebook.png"
+                  alt="facebook"
+              /></a>
             </li>
             <li>
-              <a href="#"><img src="images/xTwitt.png" alt="xTwitt" /></a>
+              <a href="#"
+                ><img class="iconHover" src="images/xTwitt.png" alt="xTwitt"
+              /></a>
             </li>
           </ul>
           <p class="email">
@@ -382,5 +412,7 @@
         </div>
       </footer>
     </div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
