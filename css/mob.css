@@ -1,0 +1,57 @@
+@media all and (max-width: 767.9px) {
+  .toTop {
+    bottom: 10px;
+    right: 10px;
+  }
+  .toTop img {
+    width: 40px;
+  }
+  /* header */
+  header {
+    height: 80px;
+    border-radius: 80px;
+    position: relative;
+  }
+  .navi,
+  .subCategories {
+    display: none;
+  }
+  .logo {
+    margin-left: -40%;
+  }
+  .logo img {
+    height: 20px;
+  }
+  .utils {
+    display: none;
+  }
+  .burger {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0; /* 질문: 아니 어디에 relative가 잡혔길래 저래 안 가요 */
+    transition: transform 0.5s ease;
+  }
+  .burger ul {
+    width: 50px;
+    height: 50px;
+  }
+  .burger li {
+    width: 30px;
+    height: 1px;
+    border: 3px solid #000;
+    border-radius: 3px;
+    margin-bottom: 4px;
+  }
+  .burger li:last-child {
+    margin-bottom: 0;
+  }
+  .burger li:first-child {
+    margin-top: 5px;
+  }
+  .burger:hover li,
+  .burger:active li {
+    border: 3px solid #ff6ec7;
+  }
+}

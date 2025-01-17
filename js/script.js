@@ -22,6 +22,8 @@ $(document).ready(function () {
     }
   );
 
+  // 질문: 터치스크린에선 어떻게 해야하지?
+
   ///////////////////////////
   // submenu
   $(".navi li:first-of-type, .subCategories").mouseover(function () {
