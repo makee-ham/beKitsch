@@ -209,12 +209,15 @@
   .magazineSection {
     left: 24px;
   }
+  .magaImage {
+    width: 30%;
+  }
   .magaDetail {
     width: 50%;
     height: 100px;
     top: 0;
     right: 0;
-    margin: 12px 24px;
+    margin: 12px 12px 12px 32px;
   }
   .magaDetail > p:nth-of-type(2) {
     display: none;

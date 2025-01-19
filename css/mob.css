@@ -24,7 +24,9 @@
     display: none;
   }
   .logo {
+    line-height: 20px;
     margin-left: -40%;
+    margin-top: -12px;
   }
   .logo img {
     height: 20px;
@@ -211,7 +213,7 @@
     left: -70px;
   }
   .sticker2 {
-    bottom: -64px;
+    bottom: -80px;
     right: -100px;
   }
   /* On sale */
@@ -222,7 +224,7 @@
   .sticker3 {
     width: 160px;
     right: -16px;
-    bottom: -56px;
+    bottom: -50px;
   }
   .saleBoard {
     flex-direction: column;
@@ -233,8 +235,30 @@
   .saleCard {
     width: 90%;
     height: 20%;
+    display: flex;
   }
-  /* ~ 여기부터 ~ */
+  .saleCardImg {
+    width: 45%;
+    height: 100%;
+    margin: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .saleCardImg img {
+    width: 100%;
+    display: block;
+    margin-top: -32px;
+  }
+  .saleCardDetail {
+    width: 45%;
+    margin: 6%;
+  }
+  .saleCardDetail h4 {
+    font-size: 1rem;
+  }
+  .saleCardDetail p {
+    display: none;
+  }
 
   /* Recommendation */
   .recommendTag {
@@ -276,5 +300,145 @@
     height: 160px;
     object-fit: cover;
     transition: transform 0.3s ease;
+  }
+
+  /* Magazine & Events */
+  .sectionME {
+    width: 100%;
+    height: 1360px;
+  }
+  /* Magazine */
+  .magazineTitle {
+    height: 200px;
+    transform: rotate(90deg);
+    top: -124px;
+    left: 24%;
+  }
+  .magazineSection {
+    width: 90%;
+    left: 5%;
+  }
+  .magaImage {
+    width: 30%;
+  }
+  .magaDetail {
+    width: 50%;
+    height: 100px;
+    top: 0;
+    right: 0;
+    margin: 12px 12px 12px 32px;
+  }
+  .magaDetail > p:nth-of-type(2) {
+    display: none;
+  }
+
+  /* Events */
+  .eventsTitle {
+    height: 180px;
+    transform: rotate(-90deg);
+    bottom: 580px;
+    left: 24%;
+  }
+  .eventsSection {
+    width: 90%;
+    right: 0;
+    left: 5%;
+    top: 720px;
+  }
+  .evenCard img {
+    display: none;
+  }
+  .evenCard {
+    position: relative;
+    isolation: isolate;
+    transition: background-size 0.3s ease;
+  }
+  .evenCard:after {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+    inset: 0;
+  }
+  .even1 {
+    background: url(../images/event1_1.png) no-repeat center;
+    background-size: auto 108%;
+  }
+  .even2 {
+    background: url(../images/event2_1.png) no-repeat center;
+    background-size: auto 108%;
+  }
+  .even3 {
+    background: url(../images/event3_1.png) no-repeat center;
+    background-size: auto 108%;
+  }
+  .eventTxt {
+    display: block;
+    font-family: Joan, serif;
+    font-weight: 100;
+    writing-mode: vertical-lr;
+    letter-spacing: 4px;
+    font-size: 3rem;
+    padding-top: 24px;
+    transition: transform 0.3s ease;
+    color: #fff;
+  }
+  .evenCard:hover p,
+  .evenCard:active p {
+    color: #ff6ec7;
+  }
+  .evenCard:hover,
+  .evenCard:active {
+    background-size: auto 112%;
+  }
+
+  /* footer */
+  footer {
+    width: 100%;
+    height: 600px;
+    border-left: none;
+    border-right: none;
+    border-top: 3px solid #000;
+    padding: 32px 32px 0 32px;
+  }
+  footer > img {
+    display: none;
+  }
+  .footerLeft {
+    float: none;
+  }
+  .footerRight {
+    float: none;
+    margin-top: 48px;
+  }
+  .logoBottom img {
+    height: 40px;
+    margin-bottom: 2px;
+  }
+  .snsList li {
+    margin-right: 8px;
+    margin-bottom: 32px;
+  }
+  .email {
+    font-size: 0.75rem;
+  }
+  .copy {
+    font-size: 0.8rem;
+  }
+  .footerRight {
+    width: 300px;
+  }
+  .supportMenu {
+    width: 48%;
+  }
+  .legalMenu {
+    width: 48%;
+  }
+  .supportMenu a,
+  .legalMenu a {
+    font-size: 0.85rem;
+  }
+  .withLove {
+    font-size: 0.9rem;
   }
 }
