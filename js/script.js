@@ -161,22 +161,6 @@ $(document).ready(function () {
   // 초기 커서 스타일
   board.style.cursor = "grab";
 
-  ///////////////////////////////////////////////////
-  // image slide
-  // 오른쪽 버튼 클릭하면 좌 <- 우 이동하면서 첫째 이미지 제일 끝에 추가한 다음 기본 위치인 센터로
-  $(".nextSlide").on("click", function () {
-    $(".slideList").animate({ marginLeft: "-180vw" }, 500, function () {
-      $(".slideList a:first").appendTo(".slideList");
-      $(".slideList").css("margin-left", "-90vw");
-    });
-  });
-  // 왼쪽 버튼 클릭하면 좌 -> 우 이동하면서 마지막 이미지 제일 처음에 추가한 다음 기본 위치인 센터로
-  $(".prevSlide").on("click", function () {
-    $(".slideList a:last").prependTo(".slideList");
-    $(".slideList").css("margin-left", "-180vw");
-    $(".slideList").animate({ marginLeft: "-90vw" }, 500);
-  });
-
   //////////////////////////////////////////////////////
   // tab menu
   $(".tabMenu a").on("click", function () {
@@ -225,4 +209,79 @@ $(document).ready(function () {
     // menu open
     $(".mainMenuTab").stop().slideToggle();
   });
+
+  ///////////////////////////////////////////////////////
+  /* 이미지 슬라이드 하다가 사람 잡아요 */
+  const mediaQuery = matchMedia("screen and (max-width: 767.9px)");
+  let slideInterval = null; // setInterval을 저장할 변수
+
+  // 모바일 슬라이드 동작 함수
+  function startMobileSlideShow() {
+    if (!slideInterval) {
+      // 중복 실행 방지
+      slideInterval = setInterval(function () {
+        $(".slideList").animate({ marginLeft: "-200vw" }, 500, function () {
+          $(".slideList a:first").appendTo(".slideList");
+          $(".slideList").css("margin-left", "-100vw");
+        });
+      }, 3000);
+    }
+  }
+
+  // PC 슬라이드 동작 함수
+  function startPCSlideShow() {
+    clearInterval(slideInterval); // 기존 모바일 슬라이드 멈춤
+    slideInterval = null; // 변수 초기화
+
+    $(".nextSlide")
+      .off("click") // 기존 이벤트 제거
+      .on("click", function () {
+        $(".slideList").animate({ marginLeft: "-180vw" }, 500, function () {
+          $(".slideList a:first").appendTo(".slideList");
+          $(".slideList").css("margin-left", "-90vw");
+        });
+      });
+
+    $(".prevSlide")
+      .off("click") // 기존 이벤트 제거
+      .on("click", function () {
+        $(".slideList a:last").prependTo(".slideList");
+        $(".slideList").css("margin-left", "-180vw");
+        $(".slideList").animate({ marginLeft: "-90vw" }, 500);
+      });
+  }
+
+  // 화면 크기 변화에 따른 슬라이드 동작
+  function startSlideShow() {
+    clearInterval(slideInterval); // 기존 동작 정리
+    slideInterval = null; // 중복 방지
+
+    if (mediaQuery.matches) {
+      // 모바일 화면일 때
+      startMobileSlideShow();
+    } else {
+      // PC 화면일 때
+      startPCSlideShow();
+    }
+  }
+
+  // 탭 활성화/비활성화 이벤트 관리
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") {
+      // 탭이 비활성화될 때 슬라이드 중지
+      clearInterval(slideInterval);
+      slideInterval = null;
+    } else if (document.visibilityState === "visible") {
+      // 탭이 다시 활성화되었을 때 슬라이드 재개
+      startSlideShow();
+    }
+  });
+
+  // 화면 크기 변화 이벤트 리스너 추가
+  mediaQuery.addEventListener("change", () => {
+    startSlideShow(); // 새로운 동작 실행
+  });
+
+  // 초기 실행
+  startSlideShow();
 });

@@ -108,6 +108,9 @@ header {
 }
 /* utils */
 /* 호버 시 핑크 되게 JS */
+.utils_m {
+  display: none;
+}
 .utils {
   position: absolute;
   top: 40px;
@@ -257,7 +260,7 @@ header {
   height: 430px;
   position: absolute;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 32px;
   background-color: #fff;

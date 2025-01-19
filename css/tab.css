@@ -70,6 +70,9 @@
   .logo img {
     height: 40px;
   }
+  .utils_m {
+    display: none;
+  }
   .utils {
     top: 30px;
     right: 40px;
