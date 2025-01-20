@@ -114,10 +114,55 @@
 
   /* img slide */
   /* 메모, 질문: owl..? 그 점점점 추가하고 싶은데... */
-  .imgSlide {
-    width: 100vw;
+  .owl-carousel-wrapper {
+    display: block;
   }
-  .slideList {
+  .owl-carousel {
+    position: relative;
+  }
+  .owl-dots {
+    position: absolute;
+    bottom: 5%;
+    left: 40%;
+  }
+  .owl-carousel span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: rgba(0, 0, 0, 0.6) !important;
+    display: block;
+    -webkit-backface-visibility: visible;
+    -webkit-transition: opacity 200ms ease;
+    -moz-transition: opacity 200ms ease;
+    -ms-transition: opacity 200ms ease;
+    -o-transition: opacity 200ms ease;
+    transition: opacity 200ms ease;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+  }
+  .owl-carousel .active span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: #fff !important;
+    border: 2px solid #000;
+    display: block;
+    -webkit-backface-visibility: visible;
+    -webkit-transition: opacity 200ms ease;
+    -moz-transition: opacity 200ms ease;
+    -ms-transition: opacity 200ms ease;
+    -o-transition: opacity 200ms ease;
+    transition: opacity 200ms ease;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+  }
+  .imgSlide {
+    /* width: 100vw; */
+    display: none;
+  }
+  /* .slideList {
     margin-left: -100vw;
   }
   .image1 {
@@ -138,7 +183,7 @@
   .nextSlide,
   .prevSlide {
     display: none;
-  }
+  } */
   /* New, Best, Steady */
   .itemWindow {
     margin-bottom: 120px;

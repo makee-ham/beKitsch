@@ -82,7 +82,11 @@
   }
 
   /* 이미지 슬라이드 */
+  .owl-carousel-wrapper {
+    display: none;
+  }
   .imgSlide {
+    display: block;
     height: 200px;
   }
   .slideList {

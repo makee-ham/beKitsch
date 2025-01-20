@@ -121,7 +121,11 @@ header {
   margin-left: 24px;
 }
 /* image slide */
+.owl-carousel-wrapper {
+  display: none;
+}
 .imgSlide {
+  display: block;
   width: 90vw;
   height: 300px;
   margin: 0 auto;
